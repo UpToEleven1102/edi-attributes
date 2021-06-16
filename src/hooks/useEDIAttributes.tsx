@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
-import ediApi from "core/api/EDIAttribute";
-import { AttributeTypeEnum, NewEdiAttribute, Product } from "core/types";
+import ediApi from "../core/api/EDIAttribute";
+import { AttributeTypeEnum, NewEdiAttribute, Product } from "../core/types";
 import { AxiosError } from "axios";
 
 function useEDIAttributes(productId: number, siteId: number) {

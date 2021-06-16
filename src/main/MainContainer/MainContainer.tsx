@@ -1,13 +1,13 @@
-import React, {useCallback, useState} from "react";
+import React, { useCallback, useState } from "react";
 import Loader from "react-loader-spinner";
-import AddEDIAttributeComponent from "components/AddEDIAttributeComponent";
-import useEDIAttributes from "hooks/useEDIAttributes";
-import {RouteProps} from "react-router-dom";
-import "./styles.css";
+import { RouteProps } from "react-router-dom";
 import * as queryString from "querystring";
-import {NewEdiAttribute} from "core/types";
+import { NewEdiAttribute } from "core/types";
+import "./styles.css";
+import useEDIAttributes from "../../hooks/useEDIAttributes";
+import AddEDIAttributeComponent from "../../components/AddEDIAttributeComponent";
 
-const MainContainer: React.FC<RouteProps> = ({location}) => {
+const MainContainer: React.FC<RouteProps> = ({ location }) => {
   const [success, setSuccess] = useState(false);
   const [openAddModal, setOpenAddModal] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string>();
@@ -19,7 +19,7 @@ const MainContainer: React.FC<RouteProps> = ({location}) => {
     siteId: null,
   });
 
-  const {data, addEdiAttribute, error, loading} = useEDIAttributes(
+  const { data, addEdiAttribute, error, loading } = useEDIAttributes(
     Number(queryString.parse(location?.search.replace("?", "")!).productId),
     Number(queryString.parse(location?.search.replace("?", "")!).siteId)
   );
@@ -83,8 +83,8 @@ const MainContainer: React.FC<RouteProps> = ({location}) => {
           {loading && (
             <div className={"message-container"}>
               <Loader
-                type='TailSpin'
-                color='rgb(245, 76, 10)'
+                type="TailSpin"
+                color="rgb(245, 76, 10)"
                 height={20}
                 width={20}
               />
@@ -98,25 +98,25 @@ const MainContainer: React.FC<RouteProps> = ({location}) => {
             )
           )}
         </div>
-        <hr/>
+        <hr />
         <table>
           <thead>
-          <tr>
-            <th>#</th>
-            <th>Key</th>
-            <th>Value</th>
-            <th>Dynamic</th>
-          </tr>
+            <tr>
+              <th>#</th>
+              <th>Key</th>
+              <th>Value</th>
+              <th>Dynamic</th>
+            </tr>
           </thead>
           <tbody>
-          {data?.map((edi, idx) => (
-            <tr key={edi.ediAttributeId}>
-              <td>{idx + 1}</td>
-              <td>{edi.ediAttribute.key}</td>
-              <td>{edi.ediAttribute.value}</td>
-              <td>{edi.ediAttribute.type === "Dynamic" ? "Yes" : "No"}</td>
-            </tr>
-          ))}
+            {data?.map((edi, idx) => (
+              <tr key={edi.ediAttributeId}>
+                <td>{idx + 1}</td>
+                <td>{edi.ediAttribute.key}</td>
+                <td>{edi.ediAttribute.value}</td>
+                <td>{edi.ediAttribute.type === "Dynamic" ? "Yes" : "No"}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
         <div id={"bottom-row"}>

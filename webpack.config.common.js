@@ -3,14 +3,12 @@ const webpack = require("webpack");
 
 module.exports = {
     entry: "./src/index.tsx",
-    mode: "development",
     module: {
         rules: [
             {
                 test: /\.(ts|tsx|js|jsx)$/,
                 exclude: /node-modules/,
-                loader: "babel-loader",
-                options: { presets: ["@babel/env", "@babel/preset-typescript"] },
+                loader: "ts-loader"
             },
             {
                 test: /\.css$/,

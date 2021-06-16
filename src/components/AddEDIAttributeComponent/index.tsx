@@ -1,9 +1,9 @@
 import React, { useCallback, useMemo, useState } from "react";
 import Modal from "react-modal";
 import ReactSwitch from "react-switch";
-import CloseIcon from "assets/CloseIcon";
 import "./styles.css";
-import {NewEdiAttribute} from "core/types";
+import { NewEdiAttribute } from "../../core/types";
+import CloseIcon from "../../assets/CloseIcon";
 
 const customStyles = {
   overlay: {
@@ -86,9 +86,9 @@ const AddEDIAttributeComponent: React.FC<Props> = ({
         </div>
         <div className={"main-content"}>
           <div className={"input-control"}>
-            <label htmlFor='key'>Key</label>
+            <label htmlFor="key">Key</label>
             <input
-              type='text'
+              type="text"
               name={"key"}
               value={ediState?.key}
               placeholder={"Enter Key Value"}
@@ -107,10 +107,10 @@ const AddEDIAttributeComponent: React.FC<Props> = ({
             Dynamic {ediState?.dynamic ? "On" : "Off"}
           </div>
           <div className={"input-control"}>
-            <label htmlFor='value'>Value</label>
+            <label htmlFor="value">Value</label>
             <input
               disabled={!!ediState?.dynamic}
-              type='text'
+              type="text"
               name={"value"}
               value={ediState?.value}
               onChange={onInputChange}
