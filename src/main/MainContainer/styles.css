@@ -1,0 +1,135 @@
+#main-container {
+  margin: auto;
+  max-width: 980px;
+  border: 1px solid rgba(133, 133, 133, 0.5);
+  box-shadow: inset 0 0 0 1px rgb(133, 133, 133);
+  background-color: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+#main-container div#tab-bar {
+  background-color: rgb(67, 67, 67);
+  padding: 7px 14px 11px 14px;
+  border: none;
+}
+
+#main-container div#tab-bar p {
+  margin: 0;
+  padding: 0;
+  height: 22px;
+  width: 170px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+#main-container .action-bar {
+  min-height: 25px;
+  padding: 16px 16px 0 16px;
+}
+
+#main-container #main-content {
+  border: 1px solid #555555;
+}
+
+#main-container #main-content .action-bar .success-message {
+  background-color: rgb(20, 162, 60);
+  padding: 2px 5px;
+  font-weight: 600;
+  border-radius: 10px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 9px;
+}
+
+#main-container #main-content .action-bar .error-message {
+  background-color: rgb(160, 162, 60);
+  padding: 2px 5px;
+  font-weight: 600;
+  border-radius: 10px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 9px;
+}
+
+#main-container #main-content hr {
+  border-top: 1px solid rgb(193, 193, 193);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  height: 0 !important;
+  margin: 16px 25px;
+}
+
+#main-container #main-content table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+#main-container #main-content table tr {
+  height: 72px;
+}
+
+#main-container #main-content table thead tr {
+  border-bottom: 2px solid #666;
+  height: 54px;
+}
+
+#main-container #main-content table tr > td:first-child,
+#main-container #main-content table tr > th:first-child {
+  text-align: center !important;
+  padding: 0 10px;
+}
+
+#main-container #main-content table tr:nth-child(even) {
+  background-color: rgb(244, 242, 242);
+  border-top: 1px solid #CCCCCC;
+  border-bottom: 1px solid #CCCCCC;
+}
+
+#main-container #main-content table tr:last-child {
+  border-bottom: 1px solid #CCCCCC;
+}
+
+#main-container #main-content table tr th {
+  color: #999999;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+#main-container #main-content table td {
+  border: none;
+  padding: 0;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+#main-container #main-content #bottom-row {
+  text-align: center;
+  padding: 20px 0 37px 0;
+}
+
+#main-container #main-content #bottom-row button {
+  font-weight: 600;
+  background-color: #ffffff;
+  padding: 12px 15px;
+  border: 2px solid rgb(245, 76, 10);
+  color: #F96302;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-align: center;
+  margin: 0;
+}

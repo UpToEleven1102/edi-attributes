@@ -1,0 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
+.app-container {
+    padding: 20px;
+}
+
+.clear-button {
+    border: none;
+    background-color: transparent;
+}
